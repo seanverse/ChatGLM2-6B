@@ -42,8 +42,8 @@ MAX_HISTORY = 3
 class ChatGLM():
     def __init__(self) -> None:
         logger.info("Start initialize model...")
-        tokenizer = AutoTokenizer.from_pretrained("models", trust_remote_code=True)
-        model = AutoModel.from_pretrained("models", trust_remote_code=True).cuda()
+        self.tokenizer = AutoTokenizer.from_pretrained("models", trust_remote_code=True)
+        self.model = AutoModel.from_pretrained("models", trust_remote_code=True).cuda()
         '''
          self.tokenizer = AutoTokenizer.from_pretrained(
             "/home/luofan/chatglm2-6b/THUDM/chatglm2-6b", trust_remote_code=True)
