@@ -50,8 +50,13 @@ async def create_item(request: Request):
 
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     tokenizer = AutoTokenizer.from_pretrained("models", trust_remote_code=True)
     model = AutoModel.from_pretrained("models", trust_remote_code=True).cuda()
+=======
+    tokenizer = AutoTokenizer.from_pretrained("THUDM/chatglm2-6b", trust_remote_code=True)
+    model = AutoModel.from_pretrained("THUDM/chatglm2-6b", trust_remote_code=True).cuda()
+>>>>>>> ecab0b63253ded881d2257f0a845c3a601b7fc97
     # 多显卡支持，使用下面三行代替上面两行，将num_gpus改为你实际的显卡数量
     # model_path = "THUDM/chatglm2-6b"
     # tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
